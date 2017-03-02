@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CodeShop-alpha(v1.0.0)</string>
+    <string name="card_shopping_title">De compras!</string>
+    <string name="card_shopping_btn">Comenzar</string>
+</resources>
