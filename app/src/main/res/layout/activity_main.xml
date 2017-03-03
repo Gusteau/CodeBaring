@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
@@ -12,29 +12,39 @@
     android:orientation="vertical"
     tools:context="com.gigasoft.csalpha_v1_0_0.MainActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
 
         <android.support.v7.widget.CardView
-            android:id="@+id/cv"
+            android:id="@+id/cv0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            card_view:cardCornerRadius="@dimen/card_corner"
+            android:backgroundTint="@color/btn_color"
             >
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/imgMiImagen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/img_card_size"
-                    android:src="@drawable/cardshopping"
-                    android:scaleType="fitEnd"
-                    android:background="@color/color_shopping_btn"
-                    />
+                <RelativeLayout
+                    android:id="@+id/imgRelativeL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_shopping_btn">
+
+                    <ImageView
+                        android:id="@+id/imgMiImagen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_card_size"
+                        android:src="@drawable/cardshopping"
+                        android:scaleType="fitEnd"
+                        />
+
+                </RelativeLayout>
 
                 <TextView
                     android:id="@+id/tvTituloTarjeta"
@@ -43,7 +53,8 @@
                     android:text="@string/card_shopping_title"
                     android:textStyle="bold"
                     android:textSize="@dimen/card_title"
-                    android:layout_alignParentTop="true"
+                    android:paddingLeft="@dimen/text_card"
+                    android:layout_alignBottom="@id/imgRelativeL"
                     android:textColor="@color/white_color"
                     />
 
@@ -52,13 +63,212 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/card_shopping_btn"
-                    android:layout_below="@id/imgMiImagen"
+                    android:layout_alignRight="@id/imgRelativeL"
+                    android:paddingRight="@dimen/text_card"
+                    android:paddingTop="@dimen/text_card"
+                    android:paddingBottom="@dimen/text_card"
+                    android:layout_below="@id/imgRelativeL"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:onClick="testingAction"
+
+                    android:contextClickable="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_space" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_color"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/imgRelativeL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_shopping_btn">
+
+                    <ImageView
+                        android:id="@+id/imgMiImagen1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_card_size"
+                        android:src="@drawable/history"
+                        android:scaleType="fitEnd"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvTituloTarjeta1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_history_title"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/card_title"
+                    android:paddingLeft="@dimen/text_card"
+                    android:layout_alignBottom="@id/imgRelativeL1"
+                    android:textColor="@color/white_color"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDescripcionTarjeta1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_history_btn"
+                    android:layout_alignRight="@id/imgRelativeL1"
+                    android:paddingRight="@dimen/text_card"
+                    android:paddingTop="@dimen/text_card"
+                    android:paddingBottom="@dimen/text_card"
+                    android:layout_below="@id/imgRelativeL1"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    android:onClick="testingAction"
+                    android:clickable="true"
+
                     />
 
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
 
-    </RelativeLayout>
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_space" />
 
-</android.support.design.widget.CoordinatorLayout>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_color"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/imgRelativeL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_shopping_btn">
+
+                    <ImageView
+                        android:id="@+id/imgMiImagen2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_card_size"
+                        android:src="@drawable/friends"
+                        android:scaleType="fitEnd"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvTituloTarjeta2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_friends_title"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/card_title"
+                    android:paddingLeft="@dimen/text_card"
+                    android:layout_alignBottom="@id/imgRelativeL2"
+                    android:textColor="@color/white_color"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDescripcionTarjeta2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_friends_btn"
+                    android:layout_alignRight="@id/imgRelativeL2"
+                    android:paddingRight="@dimen/text_card"
+                    android:paddingTop="@dimen/text_card"
+                    android:paddingBottom="@dimen/text_card"
+                    android:layout_below="@id/imgRelativeL2"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    android:onClick="testingAction"
+                    android:clickable="true"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_space" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/btn_color"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/imgRelativeL3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_shopping_btn">
+
+                    <ImageView
+                        android:id="@+id/imgMiImagen3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/img_card_size"
+                        android:src="@drawable/quick"
+                        android:scaleType="fitEnd"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvTituloTarjeta3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_quick_title"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/card_title"
+                    android:paddingLeft="@dimen/text_card"
+                    android:layout_alignBottom="@id/imgRelativeL3"
+                    android:textColor="@color/white_color"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDescripcionTarjeta3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_quick_btn"
+                    android:layout_alignRight="@id/imgRelativeL3"
+                    android:paddingRight="@dimen/text_card"
+                    android:paddingTop="@dimen/text_card"
+                    android:paddingBottom="@dimen/text_card"
+                    android:layout_below="@id/imgRelativeL3"
+                    android:textColor="@color/white_color"
+                    android:textStyle="bold"
+                    android:onClick="testingAction"
+                    android:clickable="true"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

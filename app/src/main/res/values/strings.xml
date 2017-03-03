@@ -2,4 +2,10 @@
     <string name="app_name">CodeShop-alpha(v1.0.0)</string>
     <string name="card_shopping_title">De compras!</string>
     <string name="card_shopping_btn">Comenzar</string>
+    <string name="card_history_title">Historial</string>
+    <string name="card_history_btn">Ver</string>
+    <string name="card_friends_title">Amigos</string>
+    <string name="card_friends_btn">Añadir</string>
+    <string name="card_quick_title">Lectura rápida</string>
+    <string name="card_quick_btn">Iniciar</string>
 </resources>
